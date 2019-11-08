@@ -82,9 +82,8 @@ private void createShareIntent(){
         shareIntent.setType("text/plain");
         String concat = SHARE_DESCRIPTION + mCandyImageUrl + HASHTAG_CANDYCODED;
         shareIntent.putExtra(Intent.EXTRA_TEXT,concat);
-    if(shareIntent.resolveActivity(getPackageManager()) != null){
+
         startActivity(shareIntent);
-    }
 
 }
 }
