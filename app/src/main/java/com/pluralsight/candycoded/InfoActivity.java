@@ -37,7 +37,10 @@ public class InfoActivity extends AppCompatActivity {
         Uri uriAddress= Uri.parse("tel:0123456789");
         Intent infoIntent = new Intent(Intent.ACTION_DIAL);
         infoIntent.setData(uriAddress);
-        startActivity(infoIntent);
+        if(infoIntent.resolveActivity(getPackageManager()) != null){
+            startActivity(infoIntent);
+        }
+
 
 
     }
