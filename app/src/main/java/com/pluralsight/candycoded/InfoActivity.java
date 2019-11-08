@@ -33,7 +33,14 @@ public class InfoActivity extends AppCompatActivity {
         }
 
     }
+    public void createPhoneIntent(View view){
+        Uri uriAddress= Uri.parse("tel:0123456789");
+        Intent infoIntent = new Intent(Intent.ACTION_DIAL);
+        infoIntent.setData(uriAddress);
+        startActivity(infoIntent);
 
+
+    }
     // ***
     // TODO - Task 2 - Launch the Google Maps Activity
     // ***
